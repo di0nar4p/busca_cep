@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v={{ time }}">
+    <title>Busca CEP</title>
+</head>
+
+<body id="main">
+  <header>
+    <section>
+
+      <table id="tabela">
+        <thead>
+          <tr>
+
+            <th>CEP</th>
+            <th>LOGRADOURO</th>
+            <th>BAIRRO</th>
+            <th>CIDADE</th>
+            <th>ESTADO</th>
+            <th>DDD</th>
+
+          </tr>
+        </thead>
+        
+        <tbody>
+         
+          <tr>
+            
+            <td id="cep">
+           
+              {{dados['cep']}}
+            </td>
+
+            <td id="logradouro">
+              
+              {{dados['logradouro']}}
+            </td>
+
+            <td id="bairro">
+              
+              {{dados['bairro']}}
+
+            </td>
+
+            <td id="cidade">
+              
+              {{dados['localidade']}}
+            </td>
+
+            <td id="estado">
+              
+              {{dados['estado']}}
+            </td>
+
+            <td id="ddd">
+              {{dados['ddd']}}
+            </td>
+           
+          </tr>
+        </tbody>
+          
+        </table>
+        <br>
+    </section>
+
+  </header>
+</body>
+</html>
