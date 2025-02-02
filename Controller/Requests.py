@@ -1,7 +1,8 @@
 import requests
 from flask import render_template
 import json
-def busca_cep(cep):
+
+def busca_cep(cep:int):
 
     url =f'https://viacep.com.br/ws/{cep}/json/'
     
@@ -12,9 +13,8 @@ def busca_cep(cep):
     try:
         
         dados= requests.get(url,headers).json()
-        return render_template('index.html', dados=dados)
+        return dados
 
     except Exception as e:
         
         return {'message': f'Bad Request: {e}'}, 400
-

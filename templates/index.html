@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,66 +7,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v={{ time }}">
     <title>Busca CEP</title>
 </head>
-
-<body id="main">
-  <header>
-    <section>
-
-      <table id="tabela">
-        <thead>
-          <tr>
-
-            <th>CEP</th>
-            <th>LOGRADOURO</th>
-            <th>BAIRRO</th>
-            <th>CIDADE</th>
-            <th>ESTADO</th>
-            <th>DDD</th>
-
-          </tr>
-        </thead>
-        
-        <tbody>
-         
-          <tr>
-            
-            <td id="cep">
-           
-              {{dados['cep']}}
-            </td>
-
-            <td id="logradouro">
-              
-              {{dados['logradouro']}}
-            </td>
-
-            <td id="bairro">
-              
-              {{dados['bairro']}}
-
-            </td>
-
-            <td id="cidade">
-              
-              {{dados['localidade']}}
-            </td>
-
-            <td id="estado">
-              
-              {{dados['estado']}}
-            </td>
-
-            <td id="ddd">
-              {{dados['ddd']}}
-            </td>
-           
-          </tr>
-        </tbody>
-          
-        </table>
-        <br>
-    </section>
-
-  </header>
+<body>
+    <div>
+        <div>
+            <form action="/cep" id="cep-form" method="GET">
+                <div>
+                    <label>BUSCA CEP</label>
+                </div>
+                <input type="text" name="cep" id="cep" placeholder="Digite o CEP" maxlength="8">
+                <button type="submit">Buscar</button>
+                <label></label>
+            </form>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}?v={{ time }}"></script>
 </body>
 </html>

@@ -68,3 +68,106 @@ label {
     color: rgb(50, 50, 50);
     font-weight: bold;
 }
+.botao{
+    background-color: rgb(54, 165, 40);
+    line-height: 22px;
+    border-radius: 5px;
+    border-color: rgba(175, 149, 149, 0.493);
+    font-family: 'Roboto';
+    margin:auto;
+    color:rgb(247, 234, 234)
+}
+
+
+.cep{
+    width: 350px;
+    height: 200px;
+    background: #1113188c;
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 5px;
+    align-items: center;
+    
+}
+
+
+.linha{
+    width: 100px;
+    height: auto;
+    background-color: rgba(173, 46, 46, 0.808);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    font-weight: 600;
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
