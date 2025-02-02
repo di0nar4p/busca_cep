@@ -40,4 +40,4 @@ Contribuições são bem-vindas! Para contribuir, faça um fork do repositório 
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT.
+Este projeto está licenciado sob a Licença Apache 2.0.
