@@ -3,18 +3,18 @@ from flask import render_template
 import json
 
 def busca_cep(cep:int):
-
-    url =f'https://viacep.com.br/ws/{cep}/json/'
-    
-    headers= {
-        'content-type':'application/json'
-    }
-
-    try:
+    if cep:
+        url =f'https://viacep.com.br/ws/{cep}/json/'
         
-        dados= requests.get(url,headers).json()
-        return dados
+        headers= {
+            'content-type':'application/json'
+        }
 
-    except Exception as e:
-        
-        return {'message': f'Bad Request: {e}'}, 400
+        try:
+            
+            dados= requests.get(url,headers).json()
+            return dados
+
+        except Exception:
+            dados = None
+            return dados
