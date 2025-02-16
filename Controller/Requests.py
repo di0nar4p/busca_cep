@@ -16,5 +16,5 @@ def busca_cep(cep:int):
             return dados
 
         except Exception:
-            dados = None
-            return dados
+          
+            return {"erro":"true"}

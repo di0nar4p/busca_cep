@@ -12,8 +12,7 @@ def index():
         cep = request.args.get('cep')
         if cep:
             dados= busca_cep(cep)
-            if dados["erro"]== "true":
-                
+            if "erro" in dados.keys():
                 return redirect(url_for('erro'))
             else:
                 return render_template('main.html', dados=dados)
